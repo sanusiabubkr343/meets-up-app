@@ -4,20 +4,17 @@ import AllMeetupsPage from './pages/AllMeetups'
 import NewMeetupPage from './pages/NewMeetup'
 import FavoritePage from './pages/Favorites'
 import MainNavigation from './components/layout/MainNavigation'
+import Layout from './components/layout/Layout'
 
 function App() {
   return (
-    <div>
-      <MainNavigation></MainNavigation>
-      <div className='wrapper'>
-           <Routes >
-        <Route path="/"  element={<AllMeetupsPage />} />
+    <Layout>
+      <Routes>
+        <Route path="/" element={<AllMeetupsPage />} />
         <Route path="/favorite" element={<FavoritePage />} />
         <Route path="/new-meet-up" element={<NewMeetupPage />} />
       </Routes>
-      </div>
-      
-    </div>
+    </Layout>
   )
 }
 export default App
